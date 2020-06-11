@@ -1,4 +1,4 @@
-object frm_app: Tfrm_app
+object frm_splashscreen: Tfrm_splashscreen
   Left = 0
   Top = 0
   ClientHeight = 630
@@ -7,5 +7,26 @@ object frm_app: Tfrm_app
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
-  DesignerMasterStyle = 0
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object MediaPlayerControl1: TMediaPlayerControl
+    Size.Width = 370.000000000000000000
+    Size.Height = 640.000000000000000000
+    Size.PlatformDefault = False
+    Align = Contents
+    MediaPlayer = MediaPlayer1
+    Margins.Left = -5.000000000000000000
+    Margins.Top = -5.000000000000000000
+    Margins.Right = -5.000000000000000000
+    Margins.Bottom = -5.000000000000000000
+  end
+  object MediaPlayer1: TMediaPlayer
+    Left = 288
+    Top = 560
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 288
+    Top = 488
+  end
 end
